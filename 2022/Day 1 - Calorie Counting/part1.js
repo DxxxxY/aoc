@@ -13,7 +13,7 @@ let tempCalories = 0
 
 //for each calorie
 calories.forEach(calorie => {
-    //if calorie is not a number (empty line), then his inventory ends and we add him to the elves array
+    //if calorie is not a number (empty line), then his inventory ends, and we add him to the elves array
     if (Number.isNaN(parseInt(calorie))) {
         elves.push(tempCalories)
         tempCalories = 0
@@ -31,4 +31,6 @@ const max = Math.max(...elves)
 const elf = elves.indexOf(max) + 1
 
 //print
-console.log(`Elf ${elf} has the most calories: ${max}`)
+console.log(`The elf who has the most calories is the ${elf}th and he has ${max} calories.`)
+
+module.exports = { elf, max, elves }
